@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payday – The Anti-Budget App for Busy Professionals</title>
+    <meta name="description" content="Payday is the personal finance app for people who hate budgeting. Get one clear 'Safe to Spend' number and achieve financial freedom without the guilt.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta property="og:title" content="Payday – The Anti-Budget App for Busy Professionals">
+    <meta property="og:description" content="Payday is the personal finance app for people who hate budgeting. Get one clear 'Safe to Spend' number and achieve financial freedom without the guilt.">
+    <meta property="og:image" content="https://yourwebsite.com/og-image.jpg"> <!-- Placeholder: Replace with actual image -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourwebsite.com/">
+    <meta property="twitter:title" content="Payday – The Anti-Budget App for Busy Professionals">
+    <meta property="twitter:description" content="Payday is the personal finance app for people who hate budgeting. Get one clear 'Safe to Spend' number and achieve financial freedom without the guilt.">
+    <meta property="twitter:image" content="https://yourwebsite.com/og-image.jpg"> <!-- Placeholder: Replace with actual image -->
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💰</text></svg>">
+    
+    <style>
+        :root {
+            --color-dark-background: #1C1C1E;
+            --color-dark-surface: #2C2C2E;
+            --color-light-text: #E5E5EA;
+            --color-mid-text: #929292;
+            --color-primary-accent: #0A84FF; /* A vibrant blue, common in Apple UIs */
+            --color-secondary-accent: #32D74B; /* A complementary green */
+            --gradient-hero: linear-gradient(135deg, #1A2980 0%, #26D0CE 100%); /* Deep blue to teal */
+            --gradient-button: linear-gradient(45deg, #0A84FF 0%, #63D471 100%);
+            --font-family-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            --font-size-hero-h1: clamp(2.5rem, 8vw + 1rem, 5.5rem);
+            --font-size-hero-tagline: clamp(1.2rem, 3vw + 0.5rem, 2.5rem);
+            --font-size-section-h2: clamp(2rem, 5vw + 1rem, 4rem);
+            --spacing-unit: 1rem;
+            --section-padding: 8vh 5vw;
+            --border-radius-lg: 12px;
+            --border-radius-md: 8px;
+            --shadow-elevation: 0 4px 20px rgba(0, 0, 0, 0.3);
+            --transition-duration: 0.3s ease;
+        }
+
+        /* Base styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family-primary);
+            background-color: var(--color-dark-background);
+            color: var(--color-light-text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden; /* Prevent horizontal scroll from animations */
+        }
+
+        a {
+            color: var(--color-primary-accent);
+            text-decoration: none;
+            transition: color var(--transition-duration);
+        }
+
+        a:hover {
+            color: var(--color-secondary-accent);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--color-light-text);
+            margin-bottom: calc(var(--spacing-unit) * 1.5);
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: var(--spacing-unit);
+            color: var(--color-mid-text);
+        }
+
+        section {
+            padding: var(--section-padding);
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden; /* For animations */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header / Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(28, 28, 30, 0.8); /* Semi-transparent dark background */
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--color-light-text);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--color-light-text);
+            font-weight: 500;
+            font-size: 1rem;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--color-primary-accent);
+            transition: width var(--transition-duration);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius-md);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform var(--transition-duration), box-shadow var(--transition-duration);
+            box-shadow: var(--shadow-elevation);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: var(--gradient-button);
+            color: var(--color-light-text);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Hero Section */
+        #hero {
+            background: var(--gradient-hero);
+            padding-top: 15vh; /* Account for fixed header */
+            position: relative;
+            overflow: hidden;
+            color: var(--color-light-text);
+            min-height: 100vh;
+        }
+
+        #hero h1 {
+            font-size: var(--font-size-hero-h1);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: var(--spacing-unit);
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            letter-spacing: -0.05em;
+            animation: fadeInScale 1s forwards;
+            animation-delay: 0.2s;
+            opacity: 0;
+        }
+
+        #hero .tagline {
+            font-size: var(--font-size-hero-tagline);
+            font-weight: 500;
+            margin-bottom: calc(var(--spacing-unit) * 1.5);
+            max-width: 800px;
+            animation: fadeIn 1s forwards;
+            animation-delay: 0.4s;
+            opacity: 0;
+        }
+
+        #hero .subheading {
+            font-size: clamp(1rem, 2vw + 0.5rem, 1.4rem);
+            max-width: 700px;
+            margin-bottom: calc(var(--spacing-unit) * 3);
+            color: rgba(255, 255, 255, 0.8);
+            animation: fadeIn 1s forwards;
+            animation-delay: 0.6s;
+            opacity: 0;
+        }
+
+        #hero .btn {
+            animation: fadeIn 1s forwards;
+            animation-delay: 0.8s;
+            opacity: 0;
+        }
+
+        /* General Section Styling */
+        section h2 {
+            font-size: var(--font-size-section-h2);
+            font-weight: 800;
+            margin-bottom: calc(var(--spacing-unit) * 2);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            animation: slideInUp 0.8s forwards;
+            opacity: 0;
+            animation-timeline: view();
+            animation-range-start: cover 20%;
+            animation-range-end: cover 50%;
+        }
+        
+        section h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-button);
+            border-radius: 2px;
+        }
+
+        section p {
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            animation: fadeIn 0.8s forwards;
+            opacity: 0;
+            animation-timeline: view();
+            animation-range-start: cover 25%;
+            animation-range-end: cover 55%;
+        }
+
+        .section-content {
+            background-color: var(--color-dark-surface);
+            padding: 3rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-elevation);
+            max-width: 900px;
+            margin: 0 auto;
+            animation: fadeInScale 0.8s forwards;
+            opacity: 0;
+            animation-timeline: view();
+            animation-range-start: cover 30%;
+            animation-range-end: cover 60%;
+        }
+
+        /* Specific Sections */
+        #problem, #trust {
+            background-color: var(--color-dark-background);
+        }
+
+        #how-it-works, #support, #about {
+            background-color: var(--color-dark-surface);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        #how-it-works .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        #how-it-works .grid-item {
+            background: var(--color-dark-background);
+            padding: 2rem;
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-elevation);
+            text-align: left;
+            transition: transform var(--transition-duration);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: slideInUp 0.8s forwards;
+            opacity: 0;
+            animation-timeline: view();
+            animation-range-start: cover 20%;
+            animation-range-end: cover 50%;
+        }
+
+        #how-it-works .grid-item:hover {
+            transform: translateY(-5px);
+        }
+
+        #how-it-works .grid-item h3 {
+            font-size: 1.5rem;
+            color: var(--color-primary-accent);
+            margin-bottom: 0.8rem;
+        }
+
+        #trust ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        #trust ul li {
+            background: var(--color-dark-surface);
+            padding: 1.5rem 2rem;
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-elevation);
+            min-width: 250px;
+            max-width: 300px;
+            text-align: left;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: fadeIn 0.8s forwards;
+            opacity: 0;
+            animation-timeline: view();
+            animation-range-start: cover 25%;
+            animation-range-end: cover 55%;
+        }
+
+        #trust ul li strong {
+            color: var(--color-secondary-accent);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111111;
+            color: var(--color-mid-text);
+            padding: 3rem var(--spacing-unit);
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        footer .footer-links a {
+            color: var(--color-mid-text);
+            margin: 0 1rem;
+            transition: color var(--transition-duration);
+        }
+
+        footer .footer-links a:hover {
+            color: var(--color-light-text);
+        }
+
+        footer p {
+            margin-top: 1rem;
+            margin-bottom: 0;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem 1.5rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .logo {
+                font-size: 1.3rem;
+            }
+
+            #hero {
+                padding-top: 12vh;
+            }
+
+            #hero h1 {
+                font-size: var(--font-size-hero-h1);
+            }
+
+            #hero .tagline {
+                font-size: var(--font-size-hero-tagline);
+            }
+
+            .btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 6vh 4vw;
+            }
+
+            .section-content {
+                padding: 2rem;
+            }
+
+            #how-it-works .grid-item {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+            }
+
+            #hero h1 {
+                font-size: var(--font-size-hero-h1);
+            }
+
+            #hero .tagline {
+                font-size: var(--font-size-hero-tagline);
+            }
+
+            section {
+                padding: 5vh 3vw;
+            }
+
+            .section-content {
+                padding: 1.5rem;
+            }
+
+            #trust ul li {
+                min-width: unset;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Payday</div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#problem">Problem</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#trust">Trust</a></li>
+                <li><a href="#support">Support</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h1>Payday</h1>
+                <p class="tagline">The personal finance app for people who hate budgeting.</p>
+                <p class="subheading">Get one clear "Safe to Spend" number, understand your cash flow, and achieve financial peace of mind without complex spreadsheets or guilt.</p>
+                <a href="https://apps.apple.com/app/payday" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
+            </div>
+        </section>
+
+        <section id="problem">
+            <div class="container">
+                <h2>The Problem with Traditional Budgeting</h2>
+                <div class="section-content">
+                    <p>Budgeting often feels like a chore. It demands meticulous tracking, categorizing every expense, and constantly adjusting. For busy professionals, this is not just tedious, it's unsustainable. The traditional approach leads to frustration, guilt, and ultimately, giving up.</p>
+                    <p>Most finance apps exacerbate the problem. They're overloaded with features, charts, and complex interfaces that make you feel overwhelmed, not empowered. Instead of simplifying your financial life, they add another layer of complexity, turning money management into a second job.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works">
+            <div class="container">
+                <h2>How Payday Changes Everything</h2>
+                <p>We believe money management should be intuitive, not intricate. Payday distills your finances into simple, actionable insights, designed to fit seamlessly into your busy life.</p>
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <h3>Safe to Spend</h3>
+                        <p>No categories, no guilt. Payday crunches the numbers from your income and fixed expenses to give you one clear, daily "Safe to Spend" amount. Spend it how you like, knowing you're always on track.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Smart Alerts</h3>
+                        <p>Stay informed without constant checking. Payday sends intelligent, non-judgmental alerts about your spending pace, upcoming bills, or if your Safe to Spend is running low.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Cash Runway</h3>
+                        <p>Visualize your financial future. See how long your current funds will last at your average spending rate, giving you peace of mind and clarity for big decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="trust">
+            <div class="container">
+                <h2>Your Financial Security, Our Priority</h2>
+                <p>In a world of data breaches and intrusive advertising, Payday stands apart. We're built on a foundation of respect for your privacy and unwavering security standards.</p>
+                <ul>
+                    <li>
+                        <strong>No Ads, Ever.</strong>
+                        <p>Your financial data is sensitive. We promise to never serve ads or allow third-party trackers within the app. Your focus stays on your money, not distractions.</p>
+                    </li>
+                    <li>
+                        <strong>No Data Selling.</strong>
+                        <p>Your data belongs to you. We will never sell, share, or misuse your personal financial information. It's strictly for your eyes and your benefit.</p>
+                    </li>
+                    <li>
+                        <strong>Privacy-First Design.</strong>
+                        <p>From the ground up, Payday is engineered to minimize data collection and maximize your privacy. We only ask for what's essential to deliver our core features.</p>
+                    </li>
+                    <li>
+                        <strong>Secure Infrastructure.</strong>
+                        <p>Your sensitive information is protected with industry-leading encryption and security protocols, mirroring the standards of top financial institutions.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="support">
+            <div class="container">
+                <h2>Simple, Transparent Support</h2>
+                <div class="section-content">
+                    <p>Payday is designed to be accessible to everyone. We believe financial clarity shouldn't come with a price tag or hidden features.</p>
+                    <p>The core Payday app and its revolutionary "Safe to Spend" feature are completely free to use, without limits. We offer optional in-app support and premium features via Apple's secure in-app purchase system, allowing us to sustainably develop and improve Payday without compromising on privacy or introducing ads. You're always in control.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>Our Mission</h2>
+                <div class="section-content">
+                    <p>We started Payday because we were tired of the financial guilt trip. We're busy professionals who understand the frustration of trying to force a square peg (our lives) into a round hole (traditional budgeting). Our mission is to empower you with effortless financial clarity, giving you the freedom to live your life without constantly worrying about money. We believe everyone deserves a clear path to financial peace, free from spreadsheets, categories, and judgment.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="mailto:contact@paydayapp.com">Contact Us</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+            <p>&copy; 2026 Payday App. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
