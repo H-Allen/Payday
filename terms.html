@@ -41,14 +41,16 @@
     
     <style>
         body {
-            background-color: #FFFBF5;
-            background-image: 
-                radial-gradient(#E8E0D5 1px, transparent 1px),
-                radial-gradient(#E8E0D5 1px, transparent 1px);
-            background-size: 40px 40px;
-            background-position: 0 0, 20px 20px;
-            background-attachment: fixed;
-        }
+                    background-color: #FFFBF5;
+                    background-image:
+                        linear-gradient(to right, rgba(200, 200, 200, 0.1) 1px, transparent 1px), /* Faint vertical lines */
+                        linear-gradient(to bottom, rgba(200, 200, 200, 0.1) 1px, transparent 1px), /* Faint horizontal lines */
+                        radial-gradient(#E8E0D5 1px, transparent 1px),
+                        radial-gradient(#E8E0D5 1px, transparent 1px);
+                    background-size: 20px 20px, 20px 20px, 40px 40px, 40px 40px;
+                    background-position: 0 0, 0 0, 0 0, 20px 20px;
+                    background-attachment: fixed;
+                }
         .paper-document {
             background: white;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(139, 119, 101, 0.1);
