@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Payday App</title>
+    <meta name="description" content="Privacy Policy for Payday - Your data is yours. Learn how we protect your financial information.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        hand: ['Caveat', 'cursive'],
+                    },
+                    colors: {
+                        paper: '#FFFBF5',
+                        peach: '#FFB085',
+                        mint: '#B5D8C7',
+                        blush: '#FFD6E0',
+                        butter: '#FFF9C4',
+                        warm: '#F5EBE0',
+                        ink: '#2D3748',
+                        'soft-gray': '#E8E0D5',
+                    },
+                    boxShadow: {
+                        'paper': '0 4px 20px -2px rgba(139, 119, 101, 0.15), 0 2px 8px -1px rgba(139, 119, 101, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #FFFBF5;
+            background-image: 
+                radial-gradient(#E8E0D5 1px, transparent 1px),
+                radial-gradient(#E8E0D5 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+            background-attachment: fixed;
+        }
+        .paper-document {
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(139, 119, 101, 0.1);
+            position: relative;
+        }
+        .paper-document::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #FFB085, #B5D8C7, #FFD6E0);
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FFFBF5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4C4B0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body class="font-sans text-ink antialiased">
+
+    <!-- Navigation -->
+    <nav class="w-full py-6 px-6 border-b border-soft-gray/30 bg-white/50 backdrop-blur-sm">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-tight flex items-center gap-2 group">
+                <span class="font-hand text-3xl text-peach group-hover:scale-110 transition-transform">P</span>
+                <span class="text-ink">Payday</span>
+            </a>
+            <a href="index.html" class="text-sm font-medium text-ink/60 hover:text-peach transition-colors flex items-center gap-1">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                Back to Home
+            </a>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="max-w-3xl mx-auto px-6 py-16">
+        <div class="paper-document rounded-3xl p-8 md:p-12">
+            <div class="mb-8">
+                <span class="font-hand text-2xl text-peach block mb-2">legal stuff</span>
+                <h1 class="text-4xl font-bold text-ink mb-4">Privacy Policy</h1>
+                <p class="text-ink/60">Last updated: January 2024</p>
+            </div>
+
+            <div class="prose prose-lg max-w-none text-ink/80 space-y-6">
+                <p class="lead text-xl text-ink/70 font-light border-l-4 border-peach pl-6 italic">
+                    "We believe your financial data is yours alone. We built Payday to help you, not to harvest your information."
+                </p>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-ink mt-8 mb-4 flex items-center gap-2">
+                        <i data-lucide="shield" class="w-6 h-6 text-mint"></i>
+                        Our Commitment
+                    </h2>
+                    <p>Payday ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-ink mt-8 mb-4 flex items-center gap-2">
+                        <i data-lucide="database" class="w-6 h-6 text-peach"></i>
+                        Information We Collect
+                    </h2>
+                    <p>We collect minimal information necessary to provide our services:</p>
+                    <ul class="list-disc pl-6 space-y-2 mt-4">
+                        <li><strong>Financial Data:</strong> Transaction history, account balances, and spending patterns (encrypted and stored locally where possible)</li>
+                        <li><strong>Device Information:</strong> Device type, operating system, and app version for troubleshooting</li>
+                        <li><strong>Usage Data:</strong> Anonymous app usage statistics to improve features</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-ink mt-8 mb-4 flex items-center gap-2">
+                        <i data-lucide="lock" class="w-6 h-6 text-blush"></i>
+                        How We Protect Your Data
+                    </h2>
+                    <p>We implement bank-level security measures:</p>
+                    <ul class="list-disc pl-6 space-y-2 mt-4">
+                        <li>256-bit AES encryption for all data transmission and storage</li>
+                        <li>Biometric authentication support (Face ID/Touch ID)</li>
+                        <li>We cannot see your bank passwords or login credentials</li>
+                        <li>Regular security audits and penetration testing</li>
+                        <li>Data anonymization for analytics</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-ink mt-8 mb-4 flex items-center gap-2">
+                        <i data-lucide="eye-off" class="w-6 h-6 text-ink/60"></i>
+                        What We Don't Do
+                    </h2>
+                    <div class="bg-mint/10 rounded-2xl p-6 border border-mint/20">
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="x-circle" class="w-5 h-5 text-mint mt-0.5 shrink-0"></i>
+                                <span>We do not sell your personal data to third parties</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="x-circle" class="w-5 h-5 text-mint mt-0.5 shrink-0"></i>
+                                <span>We do not share your financial information with advertisers</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="x-circle" class="w-5 h-5 text-mint mt-0.5 shrink-0"></i>
+                                <span>We do not track your location beyond what is necessary for fraud prevention</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="x-circle" class="w-5 h-5 text-mint mt-0.5 shrink-0"></i>
+                                <span>We do not store your bank login credentials on our servers</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-ink mt-8 mb-4">Your Rights</h2>
+                    <p>You have the right to:</p>
+                    <ul class="list-disc pl-6 space-y-2 mt-4">
+                        <li>Access and download your personal data</li>
+                        <li>Request deletion of your account and associated data</li>
+                        <li>Opt-out of non-essential communications</li>
+                        <li>Update or correct your information</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-ink mt-8 mb-4">Contact Us</h2>
+                    <p>If you have questions about this Privacy Policy, please contact us at:</p>
+                    <div class="bg-warm/30 rounded-xl p-6 mt-4 inline-block">
+                        <a href="mailto:privacy@payday.app" class="text-peach font-medium hover:underline">privacy@payday.app</a>
+                    </div>
+                </section>
+
+                <div class="mt-12 pt-8 border-t border-soft-gray/30 text-sm text-ink/50">
+                    <p>By using Payday, you agree to this Privacy Policy. We may update this policy from time to time, and will notify you of significant changes via the app or email.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-soft-gray/30 bg-white/50">
+        <div class="max-w-4xl mx-auto text-center text-sm text-ink/40">
+            <p>© 2024 Payday App. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

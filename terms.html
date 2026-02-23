@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Payday App</title>
+    <meta name="description" content="Terms of Service for Payday - The anti-budget finance app. Simple terms for simple money management.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        hand: ['Caveat', 'cursive'],
+                    },
+                    colors: {
+                        paper: '#FFFBF5',
+                        peach: '#FFB085',
+                        mint: '#B5D8C7',
+                        blush: '#FFD6E0',
+                        butter: '#FFF9C4',
+                        warm: '#F5EBE0',
+                        ink: '#2D3748',
+                        'soft-gray': '#E8E0D5',
+                    },
+                    boxShadow: {
+                        'paper': '0 4px 20px -2px rgba(139, 119, 101, 0.15), 0 2px 8px -1px rgba(139, 119, 101, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #FFFBF5;
+            background-image: 
+                radial-gradient(#E8E0D5 1px, transparent 1px),
+                radial-gradient(#E8E0D5 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+            background-attachment: fixed;
+        }
+        .paper-document {
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(139, 119, 101, 0.1);
+            position: relative;
+        }
+        .paper-document::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #FFB085, #B5D8C7, #FFD6E0);
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FFFBF5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4C4B0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body class="font-sans text-ink antialiased">
+
+    <!-- Navigation -->
+    <nav class="w-full py-6 px-6 border-b border-soft-gray/30 bg-white/50 backdrop-blur-sm">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-tight flex items-center gap-2 group">
+                <span class="font-hand text-3xl text-peach group-hover:scale-110 transition-transform">P</span>
+                <span class="text-ink">Payday</span>
+            </a>
+            <a href="index.html" class="text-sm font-medium text-ink/60 hover:text-peach transition-colors flex items-center gap-1">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                Back to Home
+            </a>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="max-w-3xl mx-auto px-6 py-16">
+        <div class="paper-document rounded-3xl p-8 md:p-12">
+            <div class="mb-8">
+                <span class="font-hand text-2xl text-peach block mb-2">the fine print</span>
+                <h1 class="text-4xl font-bold text-ink mb-4">Terms of Service</h1>
+                <p class="text-ink/60">Last updated: January 2024</p>
+            </div>
+
+            <div class="prose prose-lg max-w-none text-ink/80 space-y-6">
+                <p class="lead text-xl text-ink/70 font-light border-l-4 border-mint pl-6 italic">
+                    "We tried to make these terms as readable as possible. No law degree required."
+                </p>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-ink mt-8 mb-4">1. Acceptance of Terms</h2>
+                    <p>By downloading, installing, or using Payday ("the App"), you agree to be bound by these Terms of Service. If you don't agree with these terms, please don't use the App. We reserve the right to update these terms, and we'll notify you of significant changes.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-ink mt-8 mb-4">2. Description of Service</h2>
+                    <p>Payday is a personal finance application designed to help you track your spending and manage your money. We provide:</p>
+                    <ul class="list-disc pl-6 space-y-2 mt-4">
+                        <li>Safe to Spend calculations</li>
+                        <li>Transaction tracking and categorization</li>
+                        <li>Financial insights and alerts</li>
+                        <li>Bank account connectivity (optional)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-ink mt-8 mb-4">3. Account Registration</h2>
+                    <p>To use Payday, you may need to create an account. You agree to:</p>
+                    <ul class="list-disc pl-6 space-y-2 mt-4">
+                        <li>Provide accurate and complete information</li>
+                        <li>Maintain the security of your account credentials</li>
+                        <li>Notify us immediately of any unauthorized access</li>
+                        <li>Be at least 18 years old (or the age of majority in your jurisdiction)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-ink mt-8 mb-4">4. Financial Data and Security</h2>
+                    <div class="bg-blush/10 rounded-2xl p-6 border border-blush/20 mb-6">
+                        <p class="font-medium text-ink mb-2">Important Disclaimer:</p>
+                        <p class="text-sm text-ink/70">Payday is a tool for financial awareness, not financial advice. We are not a bank, lender, or financial advisor. The "Safe to Spend" number is an estimate based on your connected accounts and should not be considered definitive financial advice.</p>
+                    </div>
+                    <p>You are responsible for:</p>
+                    <ul class="list-disc pl-6 space-y-2 mt-4">
+                        <li>Verifying the accuracy of your financial data</li>
+                        <li>Making final decisions about spending and saving</li>
+                        <li>Consulting with professional financial advisors for major decisions</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-ink mt-8 mb-4">5. Acceptable Use</h2>
+                    <p>You agree not to:</p>
+                    <ul class="list-disc pl-6 space-y-2 mt-4">
+                        <li>Use the App for any illegal purposes</li>
+                        <li>Attempt to bypass our security measures</li>
+                        <li>Reverse engineer or modify the App</li>
+                        <li>Use automated systems to access the App (bots, scrapers)</li>
+                        <li>Interfere with other users' access to the App</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-ink mt-8 mb-4">6. Intellectual Property</h2>
+                    <p>Payday and its original content, features, and functionality are owned by us and protected by international copyright, trademark, and other intellectual property laws. You may not copy, modify, or create derivative works without our permission.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-ink mt-8 mb-4">7. Termination</h2>
+                    <p>We may terminate or suspend your account immediately, without prior notice or liability, for any reason, including breach of these Terms. Upon termination, your right to use the App will immediately cease.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-ink mt-8 mb-4">8. Limitation of Liability</h2>
+                    <p>In no event shall Payday, its directors, employees, or agents be liable for any indirect, incidental, special, or consequential damages arising out of your use of the App. This includes but is not limited to financial losses resulting from reliance on our Safe to Spend calculations.</p>
+                    <p class="mt-4 text-sm text-ink/60 italic">Bottom line: We're here to help, but you're ultimately responsible for your financial decisions.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-ink mt-8 mb-4">9. Governing Law</h2>
+                    <p>These Terms shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflict of law provisions.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-ink mt-8 mb-4">10. Contact Information</h2>
+                    <p>Questions about these Terms? Reach out to us:</p>
+                    <div class="bg-warm/30 rounded-xl p-6 mt-4 inline-block">
+                        <a href="mailto:legal@payday.app" class="text-peach font-medium hover:underline">legal@payday.app</a>
+                    </div>
+                </section>
+
+                <div class="mt-12 pt-8 border-t border-soft-gray/30">
+                    <p class="text-sm text-ink/50 mb-4">By using Payday, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.</p>
+                    <div class="flex items-center gap-2 text-sm text-ink/40">
+                        <i data-lucide="heart" class="w-4 h-4 text-blush fill-current"></i>
+                        <span>Thanks for reading!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-soft-gray/30 bg-white/50">
+        <div class="max-w-4xl mx-auto text-center text-sm text-ink/40">
+            <p>© 2024 Payday App. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
